@@ -1,6 +1,6 @@
 "use strict";
 
-describe("failfasdfasdfsdf", () => {
+describe("promises.helper", () => {
     beforeEach(() => {
         require("../lib/promises.helper");
     });

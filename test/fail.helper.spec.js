@@ -1,6 +1,6 @@
 "use strict";
 
-describe("failfasdfasd", () => {
+describe("fail.helper", () => {
     beforeEach(() => {
         require("../lib/fail.helper");
     });
