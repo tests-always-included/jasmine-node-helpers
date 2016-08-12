@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/opentoken-io/opentoken.git"
+    "url": "git+https://github.com/tests-always-included/node-test-helpers.git"
   },
   "keywords": [
     "test",
     "helper",
     "node"
   ],
-  "author": "Test Always Included Team",
+  "author": "Tests Always Included Team",
   "contributors": [
     {
       "name": "Christopher Tetreault",
@@ -26,9 +26,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/test-always-included/node-test-helpers/issues"
+    "url": "https://github.com/tests-always-included/node-test-helpers/issues"
   },
-  "homepage": "https://github.com/test-always-included/node-test-helpers#readme",
+  "homepage": "https://github.com/tests-always-included/node-test-helpers#readme",
   "devDependencies": {
     "codecov": "^1.0.1",
     "eslint": "^2.10.2",
