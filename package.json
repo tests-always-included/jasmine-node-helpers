@@ -35,5 +35,6 @@
     "istanbul": "^0.4.2",
     "jasmine-node": "^1.14.5",
     "mock-require": "^1.3.0"
-  }
+  },
+  "dependencies": {}
 }
