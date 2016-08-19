@@ -9,25 +9,29 @@ Node Test Helpers
 
 About
 -----
-This contains a series of [Jasmine] helpers to facilitate testing certain functionality easily. If not using [Jasmine] this isn't going to help your testing suite very much.
+This contains a series of [Jasmine] helpers to facilitate testing certain functionality more easily. These help to detect when a test fails, but should have passed, turn middleware into a promise, check links in a header for and makes it easier to use promises in tests. More explanation is below for each helper.
+
+*Note: If you are not using [Jasmine] these helpers aren't going to help your testing suite very much.*
 
 
 How to Use
 ----------
-Include the package into your package.json.
+Include the package in your `package.json` file.
 
 ```
 npm install --save-dev node-test-helpers
 ```
 
-Then you need to be able to include the helper in your testing directory or where you'd like to run tests. You'll do this by creating a symbolic link to files contained. Caution: link to the files not the folder. Jasmine doesn't seem to pick up on the files if only the folder is linked. Below is an example of setting up a symbolic link. Make sure to include the folder in your `.gitignore` file so you don't commit the files as this folder will show up in your status.
+Then you need to be able to include the helper in your testing directory or where you'd like to run tests. You'll do this by creating a symbolic link to files contained. You'll want to link to the files and not the folder. Jasmine doesn't seem to pick up on the files if only the folder is linked. Below is an example of setting up a symbolic link. Make sure to include the folder in your `.gitignore` file so you don't commit the files as this folder will show up in your status.
 
 ```
 // Linux/MacOS
-ln -s ./path/to/project/node_modules/node-test-helpers/lib/* ./path/to/project/test-folder/node-test-helpers/
+mkdir ./path/to/project/test-folder/node-test-helpers
+
+ln -s /path/to/project/from/root/node_modules/node-test-helpers/lib/* ./path/to/project/test-folder/node-test-helpers/
 
 // Windows
-// If you can figure out how to make symlink work, good on you, make a [fork](CONTRIBUTING.md) and update these instructions.
+// If you can figure out how to make symlink work, good on you, make a [fork](CONTRIBUTING.md) and update those instructions please.
 ```
 
 jasmine.checkLinks
@@ -57,7 +61,7 @@ describe("a suite", () => {
 
 jasmine.fail
 ------------
-This is most useful when testing a promise which you are wanting to check the test is getting to the reject successfully, but want to fail in case code changes which makes the code succeed instead of fail.
+This is most useful when testing a promise which you are wanting to check the test is getting to the reject successfully, but want to fail in case code changes which makes the promise resolve instead of reject. This will make the test fail so it can be caught and code can be diagnosed.
 
 ```js
 describe("a suite", () => {
@@ -74,7 +78,7 @@ describe("a suite", () => {
 
 jasmine.middlewareToPromise
 ---------------------------
-Used when wanting to make a piece of middleware used in setting up a node server and you want to make it to be ....
+Used when wanting to make a piece of middleware used in setting up a node server and you want to make it to be run synchronously with your tests to get a response back straight aways without waiting for a real promise to resolve.
 
 ```js
 describe("a suite", () => {
