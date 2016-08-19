@@ -1,6 +1,6 @@
 Node Test Helpers
-==================
-*Helping you test your [Node.js] applications one helper at a time.*
+=================
+*Helping you test your [Node.js] applications, one helper at a time.*
 
 [![Build Status][travis-image]][Travis CI]
 [![Dependencies][dependencies-image]][Dependencies]
@@ -9,7 +9,26 @@ Node Test Helpers
 
 About
 -----
-This contains a series of [Jasmine] helpers to facilitate testing certain functionality easily.
+This contains a series of [Jasmine] helpers to facilitate testing certain functionality easily. If not using [Jasmine] this isn't going to help your testing suite very much.
+
+
+How to Use
+----------
+Include the package into your package.json.
+
+```
+npm install --save-dev node-test-helpers
+```
+
+Then you need to be able to include the helper in your testing directory or where you'd like to run tests. You'll do this by creating a symbolic link to files contained. Caution: link to the files not the folder. Jasmine doesn't seem to pick up on the files if only the folder is linked. Below is an example of setting up a symbolic link. Make sure to include the folder in your `.gitignore` file so you don't commit the files as this folder will show up in your status.
+
+```
+// Linux/MacOS
+ln -s ./path/to/project/node_modules/node-test-helpers/lib/* ./path/to/project/test-folder/node-test-helpers/
+
+// Windows
+// If you can figure out how to make symlink work, good on you, make a [fork](CONTRIBUTING.md) and update these instructions.
+```
 
 jasmine.checkLinks
 ------------------
