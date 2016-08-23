@@ -1,6 +1,11 @@
 "use strict";
 
-xdescribe("fail.helper", () => {
+ddescribe("fail.helper", () => {
+    var expectMock;
+
+    beforeEach(() => {
+        expectMock = require("./mock/expect-mock");
+    });
     it("expects jasmine.fail to exist", () => {
         expect(jasmine.fail).not.toBeDefined();
     });
@@ -8,21 +13,24 @@ xdescribe("fail.helper", () => {
         require("../lib/fail.helper");
         expect(jasmine.fail).toEqual(jasmine.any(Function));
     });
-    describe("fsdfadaf", () => {
+    describe("checking for fail", () => {
         beforeEach(() => {
             require("../lib/fail.helper");
         });
-        it("should do something", () => {
-            jasmine.fail(false, false);
+        it("should fail when arguments are the same", () => {
+            jasmine.fail(false, false, expectMock)
         });
-        it("should do something2", () => {
-            jasmine.fail(null, false);
+        it("should fail when first argument is null", () => {
+            jasmine.fail(null, false, expectMock);
         });
-        it("should do something3", () => {
-            jasmine.fail(undefined, false);
+        it("should fail when first argument is undefined", () => {
+            jasmine.fail(undefined, false, expectMock);
         });
-        it("should do something4", () => {
-            jasmine.fail(false, undefined);
+        it("should fail when second argument is undefined", () => {
+            jasmine.fail(false, undefined, expectMock);
+        });
+        it("should fail when second argument is null", () => {
+            jasmine.fail(false, null, expectMock);
         });
     });
 });
