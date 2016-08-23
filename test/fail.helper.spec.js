@@ -1,13 +1,10 @@
 "use strict";
 
-ddescribe("fail.helper", () => {
+describe("fail.helper", () => {
     var expectMock;
 
     beforeEach(() => {
         expectMock = require("./mock/expect-mock");
-    });
-    it("expects jasmine.fail to exist", () => {
-        expect(jasmine.fail).not.toBeDefined();
     });
     it("expects jasmine.fail to exist", () => {
         require("../lib/fail.helper");
