@@ -103,14 +103,14 @@ describe("a suite", () => {
 See how much simpler that is? You won't need to add `done` to the `it` or accidentally put `done` in the `describe` and wonder why your tests are failing when you've been writing tests all day.
 
 
-[Code Coverage]: https://codecov.io/github/AbsentSemicolon/node-test-helpers?branch=develop
-[codecov-image]: https://codecov.io/github/AbsentSemicolon/node-test-helpers/coverage.svg?branch=develop
-[Dev Dependencies]: https://david-dm.org/AbsentSemicolon/node-test-helpers/develop#info=devDependencies
-[devdependencies-image]: https://david-dm.org/AbsentSemicolon/node-test-helpers/develop/dev-status.png
-[Dependencies]: https://david-dm.org/absentsemicolon/node-test-helpers/develop
-[dependencies-image]: https://david-dm.org/absentsemicolon/node-test-helpers/develop.png
+[Code Coverage]: https://codecov.io/github/TestsAlwaysIncluded/jasmine-node-helpers?branch=develop
+[codecov-image]: https://codecov.io/github/TestsAlwaysIncluded/jasmine-node-helpers/coverage.svg?branch=develop
+[Dev Dependencies]: https://david-dm.org/TestsAlwaysIncluded/jasmine-node-helpers/develop#info=devDependencies
+[devdependencies-image]: https://david-dm.org/TestsAlwaysIncluded/jasmine-node-helpers/develop/dev-status.png
+[Dependencies]: https://david-dm.org/testsalwaysincluded/jasmine-node-helpers/develop
+[dependencies-image]: https://david-dm.org/testsalwaysincluded/jasmine-node-helpers/develop.png
 [Jasmine]: https://jasmine.github.io/
 [Jasmine-Node]: https://www.npmjs.com/package/jasmine-node
 [Node.js]: https://nodejs.org
-[travis-image]: https://secure.travis-ci.org/AbsentSemicolon/node-test-helpers.png
-[Travis CI]: http://travis-ci.org/AbsentSemicolon/node-test-helpers
+[travis-image]: https://secure.travis-ci.org/TestsAlwaysIncluded/jasmine-node-helpers.png
+[Travis CI]: http://travis-ci.org/TestsAlwaysIncluded/jasmine-node-helpers
