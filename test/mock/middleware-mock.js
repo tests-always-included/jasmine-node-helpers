@@ -1,14 +1,15 @@
 "use strict";
 
-module.exports = () => {
+module.exports = (thing, second) => {
     return (server) => {
         return (res, req, next) => {
-            var promise;
+            second.call().then(() => {
+                thing.call();
 
-            promise = new Promise();
-            promise.then(() => {
-                return next(true);
+                return next();
             }, () => {
+                thing.otherCall();
+
                 return next(false);
             });
         };
