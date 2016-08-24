@@ -4,7 +4,7 @@
     "description": "Public and free software for helping test node projects.",
     "main": "/index.js",
     "scripts": {
-        "test": "istanbul cover jasmine-node --captureExceptions test/ && codecov .",
+        "test": "istanbul cover jasmine-node --captureExceptions spec/ && codecov .",
         "watch": "jasmine-node lib test --autotest --watch"
     },
     "repository": {
