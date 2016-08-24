@@ -1,7 +1,7 @@
 {
-    "name": "node-test-helpers",
+    "name": "jasmine-node-helpers",
     "version": "1.0.0",
-    "description": "Public and free software for helping test node projects.",
+    "description": "Public and free software for helping test NodeJS projects using Jasmine-Node.",
     "main": "/index.js",
     "scripts": {
         "test": "istanbul cover jasmine-node --captureExceptions spec/ && codecov .",
