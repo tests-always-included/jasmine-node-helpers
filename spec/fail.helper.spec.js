@@ -1,3 +1,5 @@
+/* eslint-disable no-undefined */
+
 "use strict";
 
 describe("fail.helper", () => {
@@ -15,7 +17,7 @@ describe("fail.helper", () => {
             require("../lib/fail.helper");
         });
         it("should fail when arguments are the same", () => {
-            jasmine.fail(false, false, expectMock)
+            jasmine.fail(false, false, expectMock);
         });
         it("should fail when first argument is null", () => {
             jasmine.fail(null, false, expectMock);

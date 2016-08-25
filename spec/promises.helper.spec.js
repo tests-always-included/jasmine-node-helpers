@@ -15,15 +15,15 @@ describe("promises.helper", () => {
                 }, 100);
             });
         });
-        it("waited for the beforeeach to finish", () => {
+        it("waited for the beforeEach to finish", () => {
             expect(check).toBe(1);
+
             return new Promise((resolve) => {
                 setTimeout(() => {
                     check = 2;
                     resolve();
                 }, 100);
             });
-
         });
         afterEach(() => {
             expect(check).toBe(2);

@@ -1,8 +1,13 @@
 "use strict";
 
 module.exports = (thing) => {
-
-    function expect (thing) {
+    /**
+     * Creates a fake object to include toBe so we can test
+     * an expect calls toBe.
+     *
+     * @return {Object}
+     */
+    function expect() {
         var mock;
 
         mock = {};
@@ -11,7 +16,7 @@ module.exports = (thing) => {
         });
 
         return mock;
-    };
+    }
 
     return expect(thing);
 };

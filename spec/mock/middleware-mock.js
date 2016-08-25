@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = (thing, second) => {
-    return (server) => {
+    return () => {
         return (res, req, next) => {
             second.call().then(() => {
                 thing.call();
