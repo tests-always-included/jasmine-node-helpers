@@ -3,7 +3,7 @@
 module.exports = () => {
     var mock;
 
-    /* This is the way the jasmine object will be
+    /* This is the way the Jasmine object will be
      * pre version 2.
      */
     mock = {

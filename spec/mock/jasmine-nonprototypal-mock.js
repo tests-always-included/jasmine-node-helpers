@@ -7,7 +7,7 @@ module.exports = (realJasmine) => {
      * An alternative mock of Jasmine for version that did away with the
      * prototypal methods.
      *
-     * This is the way the jasmine object will appear post version 2.
+     * This is the way the Jasmine object will appear post version 2.
      */
     function JasmineEnv() {
         this.afterAll = () => {};
